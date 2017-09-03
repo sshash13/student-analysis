@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<style>
+			h1{
+				text-align: center;
+			}
+		</style>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+	</head>
+	<body>
+		<div class="container">
+			<h1>Welcome!</h1>
+
+
+			<form action="">
+				<div class="form-group">
+					<label for="sem-list">Select Semester:</label>
+					<select class="form-control" name="sem" id="sem-list" onchange="getSubject(this.value)">
+						<option value="1">Sem 1</option>
+						<option value="2">Sem 2</option>
+						<option value="3">Sem 3</option>
+						<option value="4">Sem 4</option>
+						<option value="5">Sem 5</option>
+						<option value="6">Sem 6</option>
+						<option value="7">Sem 7</option>
+						<option value="8">Sem 8</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="class-list">Select Class:</label>
+					<select class="form-control" id="class-list">
+						<option value="">A</option>
+						<option value="">B</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="subject-list">Select Subject:</label>
+					<select class="form-control" id="subject-list">
+						<option value="">Select subject</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+
+
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<script>
+
+			function getSubject(val){
+				$.ajax({
+					type:"POST",
+					url: "get_subject.php",
+					data:'sem_id='+val, //select subjects acc to sem from db
+					success: function(data){
+						$("#subject-list").html(data);//add subjects
+					}
+				});
+			}
+
+		</script>
+	</body>
+</html>
