@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Marks</title>
+  <title>Input Marks</title>
+  <link rel="icon" href="http://i65.tinypic.com/ipqdqq.png" type="image/png">
   <h1>Sem XX-/*Subject</h1>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style type="text/css">
     h1{
       text-align: center;
       font-family: verdana;
     }
 
-    table {
+    .center{
+      width: 500px;
+      margin: 0 auto; 
+    }
+  /* table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 30%;
-   	
-   }
+       	
+   }*/
 
-  body{
+/*  body{
   	background-color: #3665C2;
-  }
+  }*/
 
-td, th {
+/*td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-}
+}*/
 
-tr:nth-child(even) {
+/*tr:nth-child(even) {
     background-color: #dddddd;
-}
+}*/
  input{
  	width: 35px;
  	height: 20px;
@@ -58,13 +65,19 @@ tr:nth-child(even) {
 </head>
 
 <body>
-
- <table align="center">
-  <tr>
-    <th>UID</th>
-    <th>Marks</th>
-    
-  </tr>
+<div class="container">
+ <table class="table table-striped center">
+ <colgroup>
+            <col class="col-md-4">
+            <col class="col-md-7">
+        </colgroup>
+  <thead>
+      <tr>
+        <th >UID</th>
+        <th >Marks</th>
+      </tr>
+    </thead>
+ <tbody>
   <tr>
     <td>15-cmpnb01-19</td>
     <td><input type="text" name="Marks"></td>
@@ -279,8 +292,9 @@ tr:nth-child(even) {
     <td><input type="text" name="Marks"></td>
     
   </tr>
+  </tbody>
 </table>
-
+</div>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 

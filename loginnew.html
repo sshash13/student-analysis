@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="http://i65.tinypic.com/ipqdqq.png" type="image/png">
+		<title>Login</title>
+
+		<style>
+			h1{
+				text-align: center;
+			}
+
+			.box{
+				width:inherit;
+				border: 1px solid gray;
+				height: inherit;
+				padding: 30px;
+				margin:0px auto;
+			}
+
+			.signup{
+				display: none;
+
+			}
+			.login{
+				display: none;
+
+			}
+			.active{
+				display: block;
+			}
+
+
+		</style>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+	</head>
+	<body>
+
+		<center><a  href="https://tcetmumbai.in/" target="_blank"><img src="http://i65.tinypic.com/ipqdqq.jpg" height="130px" width="150px"></a></center>
+
+		<div class="container">
+
+
+			<div class="box">
+
+				<div class="btn-group" role="group" aria-label="Basic example">
+
+					<button type="button" class="btn btn-secondary" id="login-btn">Log In</button>
+					<button type="button" class="btn btn-primary" id="signup-btn">Sign Up</button>
+				</div>
+				<br>
+				<!--	<ul class="nav nav-pills">
+<li class="nav-item">
+<button class="btn btn-primary space" id="login-btn">Log In</button>
+</li>
+<li class="nav-item">
+<button class="btn btn-primary space" id="signup-btn">Sign Up</button>
+</li>
+</ul>
+-->
+				<br>
+				<div class="active login">
+					<h1>Faculty Login</h1>
+					<form action="selection.html">
+
+						<div class="form-group">
+							<div class="form-group">
+								<label for="username-login">Username:</label>
+								<input type="username" class="form-control" id="username-login" name="username" placeholder="Enter username">
+							</div>
+
+							<label for="password-login">Password:</label>
+							<input type="password" class="form-control" id="password-login" name="password" placeholder="Enter Password">
+						</div>
+						<input type="submit" class="btn btn-primary" value="Login"></input>
+					<!-- <a href="newlogin.html" target="_blank">New user?</a> -->
+					</form>
+			</div>
+
+
+			<div class="signup">
+				<h1>SignUp</h1>
+
+				<form action="">
+
+
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="username" class="form-control" id="username" name="username" placeholder="Enter a username">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+					</div>
+
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+					</div>
+					<div class="form-group">
+						<label for="confirmpassword">Confirm Password</label>
+						<input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Re-enter Password">
+					</div>
+					<input type="submit" class="btn btn-primary"></input>
+				</form>
+
+		</div>
+		</div>
+
+
+	</div>
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script>
+
+	$("#login-btn").click(function(){
+		$(".login").addClass("active");
+		$(".signup").removeClass("active");
+	});
+
+	document.getElementById("signup-btn").onclick=function(){
+
+		$(".login").removeClass("active");
+		$(".signup").addClass("active");
+	};
+
+</script>
+
+
+</body>
+</html>
